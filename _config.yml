@@ -13,11 +13,25 @@
 # https://learnxinyminutes.com/docs/yaml/
 #
 # Site settings
-# These are used to personalize your new site and can be found in the .env file.
-# If you look in the HTML files, you will see them accessed via {{ site.env.TITLE }}, 
-# {{ site.env.EMAIL }}, and so on. You can create any custom variable you would like,
-# and they will be accessible in the templates via {{ site.env.MYVARIABLE }}.
-#
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+title: mattriley.photo
+email: matt@mattriley.me
+author:
+  name: Matt Riley
+  email: matt@mattriley.me #optional
+  website: https://mattriley.photo
+description: >- # this means to ignore newlines until "baseurl:"
+  Photostream
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://mattriley.photo/" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: mjriley1878
+github_username: matt-riley
+instagram_username: mattriley1878
+
 # Build settings
 plugins:
   - jekyll-dotenv
@@ -39,7 +53,7 @@ image_processing:
   tint:
     source: photos/original
     destination: photos/tint
-    resize_to_fill: [1,1]
+    resize_to_fill: [1, 1]
     saver:
       strip: true
 
